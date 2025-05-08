@@ -1,0 +1,95 @@
+
+
+
+    <nav id="navbar" class="navbar-glass py-4 px-6 lg:px-12 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Brand Logo -->
+            <div class="flex items-center">
+                <a href="#" class="text-2xl md:text-3xl font-bold brand-text">Muhammad Sameer</a>
+                <span class="ml-2 px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full hidden md:inline">MEAN Stack</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-1">
+                <a href="#" routerLink="/" class="nav-link px-4 py-2 text-gray-800 hover:text-blue-600 font-medium">Home</a>
+                <a href="#" routerLink="/insert" class="nav-link px-4 py-2 text-gray-800 hover:text-blue-600 font-medium">Insert</a>
+                <a href="#" routerLink="/view" class="nav-link px-4 py-2 text-gray-800 hover:text-blue-600 font-medium">View</a>
+                <a href="#" routerLink="/about" class="nav-link px-4 py-2 text-gray-800 hover:text-blue-600 font-medium">About</a>
+                <a href="#" class="nav-button ml-2 px-4 py-2 rounded-full text-white font-medium">Get Started <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+            
+            <!-- Mobile Toggle Button -->
+            <button id="hamburger" class="hamburger md:hidden focus:outline-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="#" routerLink="/" class="nav-link px-4 py-3 bg-white bg-opacity-30 rounded-lg text-gray-800 hover:text-blue-600 font-medium">Home</a>
+                <a href="#" routerLink="/insert" class="nav-link px-4 py-3 bg-white bg-opacity-30 rounded-lg text-gray-800 hover:text-blue-600 font-medium ">Insert</a>
+                <a href="#" routerLink="/view" class="nav-link px-4 py-3 bg-white bg-opacity-30 rounded-lg text-gray-800 hover:text-blue-600 font-medium">View</a>
+                <a href="#" routerLink="/about" class="nav-link px-4 py-3 bg-white bg-opacity-30 rounded-lg text-gray-800 hover:text-blue-600 font-medium">About</a>
+            
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('animate__fadeInDown');
+        });
+        
+        // Sticky navbar on scroll
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = window.scrollY;
+        
+        window.addEventListener('scroll', () => {
+            if (lastScrollY < window.scrollY && window.scrollY > 100) {
+                navbar.classList.add('sticky');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-3');
+            } else {
+                navbar.classList.remove('sticky');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-3');
+            }
+            
+            lastScrollY = window.scrollY;
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+
+

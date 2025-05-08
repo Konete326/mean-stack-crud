@@ -1,0 +1,86 @@
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="page-title">View Users</h1>
+        </div>
+        
+        <!-- Desktop Table View -->
+        <div class="table-wrapper">
+            <div class="glass-card p-4 mb-5">
+                <div class="table-responsive">
+                    <table class="table table-custom table-hover table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Password</th>
+                                <th scope="col" class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            @for (user of users; track $index) {
+                                <tr>
+                                    <td data-label="Name" class="fw-semibold">{{ user.name }}</td>
+                                    <td data-label="Email">{{ user.email }}</td>
+                                    <td data-label="Age">{{ user.age }}</td>
+                                    <td data-label="Address">{{ user.address }}</td>
+                                    <td data-label="Password" class="password-mask">{{user.password}}</td>
+                                    <td data-label="Actions">
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <a [routerLink]="'/insert/'+user._id" class="btn btn-gradient" type="button">
+                                                <i class="fas fa-edit me-2"></i> Edit
+                                            </a>
+                                            <a (click)="delete(user._id)" class="btn btn-danger-custom btn-gradient" type="button">
+                                                <i class="fas fa-trash-alt me-2"></i> Delete
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Cards View -->
+        <div class="mobile-cards">
+            @for (user of users; track $index) {
+                <div class="user-card mb-4">
+                    <div class="user-card-header d-flex justify-content-between align-items-center">
+                        <span>{{ user.name }}</span>
+                        <div class="d-flex gap-2">
+                            <a [routerLink]="'/insert/'+user._id" class="btn btn-sm btn-light" type="button">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a (click)="delete(user._id)" class="btn btn-sm btn-light" type="button">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="user-card-body">
+                        <div class="user-field">
+                            <span class="user-field-label">Email:</span>
+                            <span class="user-field-value">{{ user.email }}</span>
+                        </div>
+                        <div class="user-field">
+                            <span class="user-field-label">Age:</span>
+                            <span class="user-field-value">{{ user.age }}</span>
+                        </div>
+                        <div class="user-field">
+                            <span class="user-field-label">Address:</span>
+                            <span class="user-field-value">{{ user.address }}</span>
+                        </div>
+                        <div class="user-field">
+                            <span class="user-field-label">Password:</span>
+                            <span class="user-field-value password-mask">{{user.password}}</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+  

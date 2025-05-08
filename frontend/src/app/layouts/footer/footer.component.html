@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern 3D Footer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .footer-glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .footer-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .footer-link:hover {
+            transform: translateY(-3px);
+            text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+        }
+        
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .footer-link:hover::after {
+            width: 100%;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.2);
+        }
+        
+        .footer-divider {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(59,130,246,0.5) 50%, rgba(255,255,255,0) 100%);
+        }
+        
+        .footer-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .footer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing content here -->
+    
+    <!-- Footer Section -->
+    <footer class="footer-glass mt-16 pt-12 pb-8 px-6 lg:px-12 w-full">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- About Section -->
+                <div class="footer-card bg-white bg-opacity-10 p-6 rounded-xl border border-white border-opacity-20">
+                    <h3 class="text-xl font-bold text-white mb-4">About CRUD App</h3>
+                    <p class="text-gray-300 mb-4">
+                        A modern MEAN stack application with 3D UI elements, providing seamless Create, Read, Update, and Delete operations.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a routerLink="/about" class="social-icon bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a routerLink="/about" class="social-icon bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a routerLink="/about" class="social-icon bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-card bg-white bg-opacity-10 p-6 rounded-xl border border-white border-opacity-20">
+                    <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a routerLink="/" class="footer-link text-gray-300 hover:text-white">Home</a></li>
+                        <li><a routerLink="/insert" class="footer-link text-gray-300 hover:text-white">Insert Data</a></li>
+                        <li><a routerLink="/view" class="footer-link text-gray-300 hover:text-white">View Data</a></li>
+                        <li><a routerLink="/about" class="footer-link text-gray-300 hover:text-white">About</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-card bg-white bg-opacity-10 p-6 rounded-xl border border-white border-opacity-20">
+                    <h3 class="text-xl font-bold text-white mb-4">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span class="text-gray-300">sameerdevexpert<span>&#64;</span>gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-blue-400 mr-3"></i>
+                            <span class="text-gray-300">03213265524</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-3"></i>
+                            <span class="text-gray-300">Karachi,Pakistan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="footer-divider my-6 w-full"></div>
+            
+            <!-- Copyright and Bottom Links -->
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2023 CRUD Application. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a routerLink="/about" class="footer-link text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a routerLink="/about" class="footer-link text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a routerLink="/about" class="footer-link text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add animation to footer cards when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.footer-card').forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease-out';
+            observer.observe(card);
+        });
+    </script>
