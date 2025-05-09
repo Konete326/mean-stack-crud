@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "681ccd96c20dccb0e46bdf8c"
+  },
+  "name": "Muhammad Sameer",
+  "email": "sameerdevexpert@gmail.com",
+  "age": 550,
+  "address": "Karachi",
+  "password": "sameer1234",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681cdae5c20dccb0e46bdf92"
+  },
+  "name": "sameer",
+  "email": "hello@gmail.com",
+  "age": 232,
+  "address": "Karachi",
+  "password": "hello@24",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681ce8897aacd92659a85b4a"
+  },
+  "name": "surf",
+  "email": "hello@gmail.com",
+  "age": 20,
+  "address": "orangi",
+  "password": "hello@24",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681ce8897aacd92659a85b4c"
+  },
+  "name": "surf",
+  "email": "hello@gmail.com",
+  "age": 20,
+  "address": "buldia",
+  "password": "hello@24",
+  "__v": 0
+}]
