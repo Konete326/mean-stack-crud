@@ -1,43 +1,110 @@
-# CRUD Application
+# MEAN Stack CRUD Application
 
-## Project Overview
+![Project Banner](layouts-pictures/crud1.jpeg)
 
-This project is a comprehensive CRUD (Create, Read, Update, Delete) application built using the MEAN stack (MongoDB, Express.js, Angular, Node.js). It showcases professional-grade development practices and architecture.
+## Overview
+
+This project is a comprehensive CRUD (Create, Read, Update, Delete) application developed using the MEAN Stack (MongoDB, Express.js, Angular, Node.js). It adheres to professional development standards and features a modern, scalable architecture.
+
+---
 
 ## Features
 
-- Create, Read, Update, Delete operations
-- Responsive design
-- Scalable architecture
+- Complete CRUD functionality
+- Responsive and modern user interface
+- Scalable backend and frontend architecture
+- Elegant UI/UX design with a purple theme
+- Simple installation and usage process
 
-## Installation
+---
 
-To install the dependencies, navigate to the `frontend` and `backend` directories and run:
+## Demo Video
+
+[![Watch on YouTube](layouts-pictures/crud2.jpeg)](https://youtu.be/vq45Dj_MiJ4)
+
+Or watch the video directly:
+
+[YouTube Video Link](https://youtu.be/vq45Dj_MiJ4)
+
+---
+
+## Screenshots
+
+| Dashboard | Create Form | List View | Responsive Layout |
+|-----------|-------------|-----------|-------------------|
+| ![Dashboard](layouts-pictures/crud1.jpeg) | ![Create](layouts-pictures/crud2.jpeg) | ![List](layouts-pictures/crud3.jpeg) | ![Responsive](layouts-pictures/crud4.jpeg) |
+
+---
+
+## Installation & Setup
+
+### 1. Clone the Repository
 
 ```bash
-npm install
+git clone <repo-url>
+cd crud
 ```
 
-## Building
-
-To build the frontend project, navigate to the `frontend` directory and run:
+### 2. Frontend Setup (Angular)
 
 ```bash
+cd frontend
+npm install
 ng build
 ```
 
-## Running the Application
-
-To start the application, navigate to the `backend` directory and run:
+### 3. Backend Setup (Node.js/Express)
 
 ```bash
+cd ../backend
+npm install
 npm start
 ```
 
+### 4. MongoDB
+
+Install and run MongoDB on your system.
+
+---
+
+## Usage
+
+- Frontend: Angular-based, responsive, and modern design
+- Backend: Express.js APIs, MongoDB database
+- Supports full CRUD operations (Create, Read, Update, Delete)
+
+---
+
+## File Structure
+
+- `frontend/` : Angular Application (User Interface)
+- `backend/` : Node.js/Express API
+- `layouts-pictures/` : UI Screenshots & Demo Media
+
+---
+
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+Contributions are welcome! Please fork the repository and submit a Pull Request.
+
+---
 
 ## License
 
 This project is licensed under the MIT License.
+
+---
+
+## Author
+
+Created by **Muhammad Sameer**  
+Email: sameerdevexpert@gmail.com
+
+---
+
+## Credits
+
+- [YouTube Tutorial](https://youtu.be/vq45Dj_MiJ4)
+- UI/UX Design Inspiration
+
+---
